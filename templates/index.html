@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.87.0">
+    <title>Today is</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sign-in/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="{{ url_for('static', path='/css/bootstrap.min.css') }}" rel="stylesheet">
+
+
+    
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', path='/css/signin.css') }}" rel="stylesheet">
+  </head>
+  <body class="text-center flex-column">
+    
+<main class="form-signin">
+  <div>
+    <h1 class="h3 mb-3 fw-normal">{{ today }}</h1>
+    <h2 class="h3 mb-3 fw-normal">{{ weekday }}</h2>
+    <p>год {{ isleap }}</p>
+    <p>в этом месяце {{ number_of_days }} {{ days_word }}</p>
+    {% if today_type %}
+    <p>день {{ today_type }}</p>
+    {% endif %}
+  </div>
+
+<hr>
+
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link text-black-50" href="http://sumo.getinformed.ru">сумо</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-black-50" href="http://docs.python.org">python</a>
+    </li>   
+    <li class="nav-item">
+      <a class="nav-link text-black-50" href="https://fastapi.tiangolo.com/">fastapi</a>
+    </li>     
+  </ul>
+
+</main>
+
+    
+  </body>
+</html>

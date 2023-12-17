@@ -1,0 +1,6 @@
+a2wsgi
+fastapi
+httpx
+Jinja2
+pydantic
+uvicorn
