@@ -4,7 +4,6 @@ from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from datetime import datetime
-import locale
 import calendar
 import httpx
 
@@ -14,8 +13,6 @@ import httpx
 # url for dayoff service
 URL_ISDAYOFF = 'https://isdayoff.ru'
 
-# localization
-locale.setlocale(locale.LC_ALL, 'ru_RU.utf8')
 
 app = FastAPI()
 application = ASGIMiddleware(app)
